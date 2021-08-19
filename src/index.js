@@ -38,3 +38,14 @@ function renderPost(){
     postForm.reset()
 }
 
+function submitComment(e){
+    event.preventDefault()
+    const commentInput = e.target.children[0].value
+    const commentList = e.target.nextElementSibling
+    
+    const li = document.createElement('li')
+    li.innerText = commentInput
+    commentList.appendChild(li)
+
+    e.target.reset()
+}
