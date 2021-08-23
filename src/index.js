@@ -10,12 +10,26 @@ console.log("Hello World <3")
 const postForm = document.getElementById("post-form")
 const postInput = document.getElementById("post-input")
 const postList = document.getElementById("post-list")
+const postURL = 'http://localhost:3000/posts'
 
 postForm.addEventListener("submit", submitPost)
 
 function submitPost(){
     event.preventDefault()
-    
+    const configObj = {
+        method: "POST",
+        headers:{
+            "Content-type": "application/json",
+            "Accept": "application/json"
+        },
+        body:JSON.stringify({
+            content: postInput.value
+        })
+    }
+    fetch(postURL, configObj)
+    .then(res => res.json)
+    .then(console.log)
+    renderPost()
 }
 
 function renderPost(){
