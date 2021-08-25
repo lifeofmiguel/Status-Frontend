@@ -1,0 +1,35 @@
+body {
+    background: #efefef;
+    font-family:cursive;
+}
+h1 {
+    font-size: 24px;
+}
+a {
+    color: #000;
+    text-decoration: underline;
+}
+a:hover {
+    color: #000;
+    text-decoration: none;
+}
+h2 {
+    font-size: 18px;
+}
+h3 {
+    font-size: 16px;
+}
+p {
+    font-size: 14px;
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+li {
+    display: list-item;
+    font-size: 16px;
+}
+ul.a {
+    list-style-type: circle;
+  }
+
+  
