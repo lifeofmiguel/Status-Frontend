@@ -23,7 +23,7 @@ class Comment {
         li.innerText = this.content
     
         const deleteBtn = document.createElement('button')
-        deleteBtn.innerText = "X"
+        deleteBtn.innerText = "Delete"
         li.appendChild(deleteBtn)
         commentList.appendChild(li)
     
